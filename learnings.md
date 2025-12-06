@@ -10,11 +10,8 @@
         - Create <Route = "/body"> 
             - Create Route Children > Create Outlet 
         - Created Footer
-
-
-Body
-    NavBar
-    Route = "/" -> Feed
-    Route = "/login" -> Login
-    Route = "/connections" -> Connections
-    Route = "/profile" -> Profile
+- Create login page
+- Install Axios for making API call (can also use fetch)
+- Install cors in backend => add middleware to app.js with configs (origin, credentials: true)
+- Whenver making API call from frontend using Axios, pass {withCredentials:true} => to send token from backend to frontend, for authentication
+- Install redux toolkit and react-redux packages
