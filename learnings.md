@@ -14,4 +14,11 @@
 - Install Axios for making API call (can also use fetch)
 - Install cors in backend => add middleware to app.js with configs (origin, credentials: true)
 - Whenver making API call from frontend using Axios, pass {withCredentials:true} => to send token from backend to frontend, for authentication
-- Install redux toolkit and react-redux packages
+- Install redux toolkit and react-redux packages : https://redux.js.org/tutorials/quick-start
+    -> configureStore
+        -> Provide store in App.js
+    -> Create slice
+    -> add reducer to Store
+
+- Updating NavBar on Login (photo + Welcome msg)
+- Refactor BASE_URL
