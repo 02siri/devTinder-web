@@ -10,6 +10,7 @@ const Login = () => {
     const [emailId, setEmailId] = useState("");
     const [password, setPassword] = useState("");
     const [toast, setToast] = useState(false);
+    const [error, setError] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -23,13 +24,15 @@ const Login = () => {
             );
 
             setToast(true);
-            setTimeout(()=> setToast(false), 3000);
-            console.log(res.data);
-            dispatch(addUser(res.data));
+            setTimeout(()=> {
+                setToast(false);
+                dispatch(addUser(res.data));
             return navigate("/feed");
+            }, 3000);
+            // console.log(res.data);
             
        }catch(err){
-        console.log(err);
+            setError(err?.response?.data || "ERROR: Something Went Wrong");
        }
         
     };
@@ -94,7 +97,10 @@ const Login = () => {
         // title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
     />
     </label>
-
+    {error && 
+    (<p className="text-red-500">{error}</p>)
+    }
+    
     <div className="card-actions justify-center m-2">
       <button className="btn btn-primary" onClick={handleLogin}>Login</button>
    </div>
