@@ -21,4 +21,8 @@
     -> add reducer to Store
 
 - Updating NavBar on Login (photo + Welcome msg)
-- Refactor BASE_URL
+- Refactor BASE_URL 
+
+- In Body component, check if token is valid, when user logs in (by checking the profile/view API).
+    - If not, redirect to the login page.
+- API call to view profile should be made only once after logging in, because it should check from the redux store if user data is present 
