@@ -34,7 +34,7 @@ const NavBar = () =>{
       <div className="navbar bg-base-content">
     <div className="flex-1">
       
-      <Link to = {user ? "/" : "/login"}
+      <Link to = {user ? "/feed" : "/login"}
       className="btn text-xl bg-base-200">DevTinder</Link>
   </div>
   {user && (

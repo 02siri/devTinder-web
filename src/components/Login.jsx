@@ -15,6 +15,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleLogin = async () => {
+         setError("");
        try{
             const res = await axios.post(
                 BASE_URL + "login",
@@ -23,10 +24,10 @@ const Login = () => {
                 {withCredentials: true},
             );
 
+            dispatch(addUser(res.data));
             setToast(true);
             setTimeout(()=> {
                 setToast(false);
-                dispatch(addUser(res.data));
             return navigate("/feed");
             }, 3000);
             // console.log(res.data);

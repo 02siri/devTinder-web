@@ -26,3 +26,6 @@
 - In Body component, check if token is valid, when user logs in (by checking the profile/view API).
     - If not, redirect to the login page.
 - API call to view profile should be made only once after logging in, because it should check from the redux store if user data is present 
+- Logout feature 
+- Get the feed and add the feed in the store 
+- Build user card in the feed
