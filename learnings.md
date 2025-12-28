@@ -29,3 +29,6 @@
 - Logout feature 
 - Get the feed and add the feed in the store 
 - Build user card in the feed
+- Edit profile feature 
+- Show toast message on save of profile
+- See all my connections
