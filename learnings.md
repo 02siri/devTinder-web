@@ -35,3 +35,4 @@
 - See all my connection requests
 - Accept/Reject connection requests
 - Send/Ignore user card from feed
+- Signup feature, redirecting to profile
