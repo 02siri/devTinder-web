@@ -37,6 +37,8 @@
 - Send/Ignore user card from feed
 - Signup feature, redirecting to profile
 
+
+
 # DEPLOYMENT
 - Sign Up on AWS
 - Launch Instance 
@@ -60,4 +62,31 @@ Frontend:
     - Enable port 80 on your instance
 
 Backend: 
-    - 
+    - Allowed  EC2 instance public IP on Mongo server
+    - Run backend server : npm start
+    - Install pm2 (Process manager to keep your application running 24*7): npm install pm2 -g
+    - Start using pm2: pm2 start npm -- start
+    - Change name of process while starting: pm2 start <old name> --name "<new name>" -- start
+    - To check pm2 logs: pm2 logs
+    - pm2 list, pm2 flush <name>, pm2 stop <name>, pm2 delete <name>
+    - Change name of process while starting: pm2 start <old name> --name "<new name>" -- start
+
+    - nginx acts as a load balancer to the serer ; sits at the front to allow/disallow any request
+
+    - open nginx config: /etc/nginx/sites-available/default
+    - nginx config for proxy pass and server name: 
+        server_name 3.27.65.46;
+
+        location /api/ {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    - restart nginx : sudo systemctl restart nginx
+
+    - modified BASE_URL path to /api/
