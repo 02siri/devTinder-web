@@ -36,3 +36,28 @@
 - Accept/Reject connection requests
 - Send/Ignore user card from feed
 - Signup feature, redirecting to profile
+
+# DEPLOYMENT
+- Sign Up on AWS
+- Launch Instance 
+- Change scret Key permissions : chmod 400 <secret>.pem
+- Connect to machine: ssh -i "<secret>.pem" ubuntu@ec2-3-27-65-46.ap-southeast-2.compute.amazonaws.com
+- Install nvm : curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+- Install node version : nvm install 23.9
+
+- Clone frontend project : git clone https://github.com/02siri/devTinder-web.git
+- Clone backend project: git clone https://github.com/02siri/DevTinder.git
+
+Frontend:
+    - Install dependencies : npm install
+    - Build Project: npm run build
+    - Update : sudo apt update
+    [Used nginx because it gives an http server]
+    - Using nginx to host our frontend project: sudo apt install nginx
+    - Start nginx : sudo systemctl start nginx
+    - Enable nginx : sudo systemctl enable nginx
+    - Copy code from dist folder (build folder) to nginx http server - /var/www/html : sudo scp -r dist/* /var/www/html/
+    - Enable port 80 on your instance
+
+Backend: 
+    - 
