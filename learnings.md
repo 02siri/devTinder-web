@@ -90,3 +90,9 @@ Backend:
     - restart nginx : sudo systemctl restart nginx
 
     - modified BASE_URL path to /api/
+
+# DOMAIN NAME 
+    - Purchased domain name from NameCheap
+    - DNS setup from CloudFlare
+    - Add cloudflare nameservers at NameCheap 
+    
