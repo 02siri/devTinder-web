@@ -1,4 +1,4 @@
-# DevTinder UI
+# Dev-Finder UI
 
 - Create Vite + React project 
 - Install Taiwind postcss [CSS framework] [tailwind v3]
@@ -47,8 +47,8 @@
 - Install nvm : curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 - Install node version : nvm install 23.9
 
-- Clone frontend project : git clone https://github.com/02siri/devTinder-web.git
-- Clone backend project: git clone https://github.com/02siri/DevTinder.git
+- Clone frontend project : git clone https://github.com/02siri/dev-finder-web.git
+- Clone backend project: git clone https://github.com/02siri/Dev-Finder.git
 
 Frontend:
     - Install dependencies : npm install
